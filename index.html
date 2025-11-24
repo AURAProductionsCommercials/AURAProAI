@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA PRODUCTIONS</title>
+
+  <!-- Google Fonts: Cinematic combo -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #d4af37;
+      --accent: #7b2ff7;
+      --accent-soft: #b57cff;
+      --bg-dark: #050008;
+      --bg-card: rgba(10, 10, 25, 0.9);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background:
+        radial-gradient(circle at top, #3a1668 0, #050008 55%, #000 100%);
+      color: #f5f5f5;
+      line-height: 1.6;
+      min-height: 100vh;
+      opacity: 0;
+      animation: fadeInBody 1.2s ease-out forwards;
+    }
+
+    /* HEADER / HERO */
+    header {
+      position: relative;
+      text-align: center;
+      padding: 90px 20px 70px;
+      background:
+        radial-gradient(circle at top, #7b2ff7 0, #1a1033 45%, #050008 100%);
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.4), transparent 55%),
+        radial-gradient(circle at 80% 0%, rgba(181, 124, 255, 0.45), transparent 60%);
+      opacity: 0.8;
+      filter: blur(3px);
+      z-index: 0;
+    }
+
+    header h1 {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 10px;
+      font-family: "Bebas Neue", system-ui, sans-serif;
+      font-size: clamp(2.8rem, 4vw + 1rem, 4rem);
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-shadow:
+        0 0 12px rgba(212, 175, 55, 0.9),
+        0 0 30px rgba(181, 124, 255, 0.8);
+    }
+
+    header p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      max-width: 520px;
+      margin-inline: auto;
+      font-weight: 300;
+      font-size: 1rem;
+      color: #f3ecff;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* LAYOUT */
+    .section {
+      padding: 50px 20px;
+    }
+
+    .section-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-family: "Bebas Neue", system-ui, sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .section p {
+      margin-top: 0.25rem;
+      color: #e2ddff;
+    }
+
+    .section.lead {
+      text-align: center;
+    }
+
+    .section.lead p {
+      font-size: 1.05rem;
+    }
+
+    /* CTA BUTTON */
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      margin-top: 24px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--gold), #f4d86e);
+      color: #1b1300;
+      font-weight: 600;
+      font-size: 0.98rem;
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.85),
+        0 0 18px rgba(212, 175, 55, 0.7);
+      transform: translateY(0);
+      transition:
+        transform 0.18s ease-out,
+        box-shadow 0.18s ease-out,
+        filter 0.18s ease-out;
+    }
+
+    .cta::after {
+      content: "➜";
+      font-size: 0.9rem;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow:
+        0 18px 35px rgba(0, 0, 0, 0.9),
+        0 0 26px rgba(212, 175, 55, 0.95);
+      filter: brightness(1.05);
+    }
+
+    /* PACKAGES */
+    #packages .packages-grid {
+      display: grid;
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    @media (min-width: 800px) {
+      #packages .packages-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .package {
+      position: relative;
+      border-radius: 18px;
+      padding: 22px 20px 20px;
+      background: var(--bg-card);
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.85),
+        0 0 18px rgba(123, 47, 247, 0.4);
+      overflow: hidden;
+      backdrop-filter: blur(18px);
+      transition:
+        transform 0.2s ease-out,
+        box-shadow 0.2s ease-out,
+        border-color 0.2s ease-out;
+    }
+
+    .package::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at top right, rgba(181, 124, 255, 0.55), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.25s ease-out;
+      pointer-events: none;
+    }
+
+    .package:hover {
+      transform: translateY(-4px);
+      box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.95),
+        0 0 24px rgba(181, 124, 255, 0.7);
+      border-color: var(--accent-soft);
+    }
+
+    .package:hover::before {
+      opacity: 1;
+    }
+
+    .package h3 {
+      margin-top: 0;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: var(--gold);
+      font-size: 1.1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .package p {
+      margin: 0;
+      color: #d9d4ff;
+      font-size: 0.95rem;
+    }
+
+    /* LISTS */
+    ul, ol {
+      margin: 0.75rem 0 0;
+      padding-left: 1.25rem;
+      color: #ddd9ff;
+      font-size: 0.95rem;
+    }
+
+    ul li,
+    ol li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 22px 16px 26px;
+      background: #050008;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 0.85rem;
+      color: #a39ac8;
+      margin-top: 40px;
+    }
+
+    footer span {
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeInBody {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AURA PRODUCTIONS</h1>
+    <p>Cinematic AI-Generated Commercials for Modern Brands</p>
+  </header>
+
+  <section class="section lead">
+    <div class="section-inner">
+      <h2>Transform Your Business with Cinematic AI Commercials</h2>
+      <p>Quick social video ads starting at $90 — delivered in 48 hours.</p>
+      <a href="#packages" class="cta">Get Your Commercial Today</a>
+    </div>
+  </section>
+
+  <section id="packages" class="section">
+    <div class="section-inner">
+      <h2>Packages</h2>
+
+      <div class="packages-grid">
+        <div class="package">
+          <h3>$90 – Quick Social Ad</h3>
+          <p>10–15 second AI social ad with Sora watermark. 48-hour delivery. 1 revision.</p>
+        </div>
+
+        <div class="package">
+          <h3>$150 – Basic Social Ad</h3>
+          <p>10–15 second AI commercial. No watermark. Logo + text overlays. 7-day delivery. 1 revision.</p>
+        </div>
+
+        <div class="package">
+          <h3>$555 – Standard Commercial</h3>
+          <p>Customized standard commercial (20–30 sec). ElevenLabs voiceover. Brand colors + logo integration. Copyright ownership of custom music. No watermark. 7-day delivery. 2 revisions valid for 7 days from purchase.</p>
+        </div>
+
+        <div class="package">
+          <h3>$1,222 – Premium Cinematic Promo</h3>
+          <p>Premium customized cinematic video (35–60 sec). Premium voiceover. Advanced storytelling. Copyright ownership of custom music. No watermark. 7-day delivery. Unlimited revisions for 3 days + 2 extra revisions valid within 7 days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2>Why Choose Us</h2>
+      <ul>
+        <li>High-end visuals powered by AI production tools</li>
+        <li>Professional AI voiceovers</li>
+        <li>Customized music you fully own</li>
+        <li>Faster delivery than traditional agencies</li>
+        <li>Costs 10x less than industry averages</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2>How It Works</h2>
+      <ol>
+        <li>You tell us about your business</li>
+        <li>We write your script</li>
+        <li>We generate scenes + music + voiceover</li>
+        <li>Your commercial is delivered within standard 7 days</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 <span>AURA PRODUCTIONS</span> — All Rights Reserved
+  </footer>
+
+</body>
+</html>
