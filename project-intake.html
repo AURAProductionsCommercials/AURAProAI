@@ -37,7 +37,14 @@
     <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
       <!-- Auto-filled package (reads from URL) -->
-      <label for="package"></label>
+      <label for="package"><select id="package" name="package" required>
+  <option value="">-- Select Your Package --</option>
+  <option value="Quick Social Ad">$90 – Quick Social Ad</option>
+  <option value="Basic Social Ad">$150 – Basic Social Ad</option>
+  <option value="Standard Commercial">$555 – Standard Commercial</option>
+  <option value="Premium Cinematic Promo">$1,222 – Premium Cinematic Promo</option>
+</select>
+</label>
       <input id="package" name="package" type="text" readonly />
 
       <label for="name">Your Name</label>
