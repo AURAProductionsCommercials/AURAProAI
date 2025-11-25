@@ -3,63 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Aura Productions</title>
+  <title>Contact & Inquiries — Aura Productions</title>
 
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="brand">
-        <h1 class="brand-title">AURA PRODUCTIONS</h1>
-        <p class="brand-tagline">Cinematic AI-Generated Commercials for Modern Brands</p>
-      </div>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="contact.html" class="active">Contact</a>
-      </nav>
+<!-- Header -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <h1 class="brand-title">AURA PRODUCTIONS</h1>
+      <p class="brand-tagline">Cinematic AI-Generated Commercials for Modern Brands</p>
     </div>
-  </header>
 
-  <section class="section">
-    <div class="section-inner">
-      <h2>Contact & Booking</h2>
-      <p>Use the form below to tell us about your business, your offer, and which package you’re interested in. We’ll follow up with ideas and next steps.</p>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
 
-      <form class="contact-form" action="https://formspree.io/f/xzzqvpkk" method="POST">
-        <!-- Replace the action URL with a real endpoint (e.g., Formspree) later -->
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" required />
+<!-- Contact Section -->
+<section class="section">
+  <div class="section-inner">
 
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required />
+    <h2>Contact & Inquiries</h2>
+    <p>
+      Have questions before starting a project? Want to learn more about our process, pricing, or capabilities?  
+      Use this form to reach out — we typically respond within 24 hours.
+    </p>
 
-        <label for="business">Business / Brand Name</label>
-        <input id="business" name="business" type="text" />
+    <!-- Contact Form -->
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
-        <label for="package">Package You're Interested In</label>
-        <input id="package" name="package" type="text" placeholder="Quick Ad, Basic Ad, Standard, etc." />
+      <label for="name">Your Name</label>
+      <input id="name" name="name" type="text" placeholder="John Doe" required />
 
-        <label for="message">Inquires</label>
-        <textarea id="message" name="message" required></textarea>
-        
-        <input type="hidden" name="_redirect" value="https://github.com/AURAProductionsCommercials/AURAProductions/blob/thank-you.html">
-        <button type="submit" 
-      </form>
+      <label for="email">Your Email</label>
+      <input id="email" name="email" type="email" placeholder="example@email.com" required />
 
-      <p style="margin-top:16px; font-size:0.9rem; color:#bfb7e8;">
-        Prefer direct payment? You can also send payment first via Venmo, PayPal, or Cash App from the Pricing page and send your receipt to our email: eyeopenworlds0@gmail.com.
-      </p>
-    </div>
-  </section>
+      <label for="subject">Subject</label>
+      <input id="subject" name="subject" type="text" placeholder="General Inquiry, Questions, Support, etc." required />
 
-  <footer>
-    © 2025 <span>AURA PRODUCTIONS</span> — All Rights Reserved
-  </footer>
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="6" placeholder="Tell us how we can help you..." required></textarea>
+
+      <!-- Redirect to thank-you page -->
+      <input type="hidden" name="_redirect" value="https://YOUR-LIVE-SITE-URL/thank-you.html">
+
+      <button type="submit" class="cta">Send Inquiry →</button>
+    </form>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  © 2025 <span>AURA Productions</span> — All Rights Reserved
+</footer>
 
 </body>
 </html>
