@@ -175,7 +175,10 @@ body {
 .section-inner {
   max-width: 960px;
   margin: 0 auto;
+  text-align: center;
+  padding: 40px 20px;
 }
+
 
 .section h2 {
   font-family: "Bebas Neue", system-ui, sans-serif;
