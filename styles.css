@@ -829,3 +829,59 @@ footer span {
   transform: translateY(0);
   box-shadow: 0 0 18px rgba(246, 200, 92, 0.5);
 }
+/* ===== TERMS / LEGAL PAGE ===== */
+
+.legal-page {
+  padding: 90px 24px 70px;
+}
+
+.legal-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.legal-heading {
+  margin-bottom: 26px;
+}
+
+.legal-heading h2 {
+  font-size: 2rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #f6c85c;
+  margin-bottom: 8px;
+}
+
+.legal-heading .lead {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  max-width: 820px;
+}
+
+.legal-disclaimer {
+  font-size: 0.8rem;
+  opacity: 0.75;
+  margin-top: 6px;
+}
+
+.legal-card {
+  margin-bottom: 14px;
+}
+
+/* Make terms text comfortable to read */
+
+.legal-card .disclosure-text,
+.legal-card .bullet-list {
+  font-size: 0.86rem;
+  line-height: 1.8;
+}
+
+.legal-card .bullet-list {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.legal-card a {
+  color: #f6c85c;
+  text-decoration: underline;
+}
