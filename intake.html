@@ -28,7 +28,7 @@
 
         <!-- STEP HEADER -->
         <header class="intake-header fade-in">
-          <p class="eyebrow">Step 2 · Tell us about your project</p>
+          <p class="eyebrow">Let’s talk about your next commercial</p>
           <h2>Intake</h2>
           <p class="lead">
             You’ve picked a package — now give us enough detail so we can design your
@@ -39,7 +39,7 @@
           <div class="intake-steps">
             <div class="step-badge done">1. Choose Package</div>
             <div class="step-badge current">2. Answer Questions</div>
-            <div class="step-badge">3. Pay & Secure Your Slot</div>
+            <div class="step-badge">3. Pay Your Commercial!</div>
           </div>
         </header>
 
@@ -58,25 +58,15 @@
               <input type="hidden" name="form_type" value="Aura Project Intake" />
 
               <!-- Selected Package (auto-filled from URL) -->
-              <label for="package">Selected Package</label>
-              <input
-                id="package"
-                name="package"
-                type="text"
-                readonly
-                placeholder="Package name will appear here"
-              />
+             <label for="package">Selected Package</label>
+<select id="package" name="package" required>
+  <option value="">Choose a package…</option>
+  <option value="$90 – Quick Social Ad">$90 – Quick Social Ad</option>
+  <option value="$150 – Basic Social Ad">$150 – Basic Social Ad</option>
+  <option value="$555 – Standard Commercial">$555 – Standard Commercial</option>
+  <option value="$1,222 – Premium Cinematic Promo">$1,222 – Premium Cinematic Promo</option>
+</select>
 
-              <label for="price">Package Price</label>
-              <input
-                id="price"
-                name="price"
-                type="text"
-                readonly
-                placeholder="$90, $150, $555, or $1,222"
-              />
-
-              <hr class="intake-divider" />
 
               <!-- Contact basics -->
               <label for="name">Your Name</label>
@@ -267,7 +257,7 @@
             </div>
 
             <div class="info-card payment-card">
-              <h3>Step 3 · Pay & Secure Your Slot</h3>
+              <h3> Pay</h3>
               <p class="disclosure-text">
                 After you submit your answers, use one of the payment options below to lock in your project.
                 Be sure to match the amount for the package you selected.
@@ -277,7 +267,6 @@
                 <!-- TODO: replace # with your actual payment links -->
                 <a href="#" target="_blank" class="pay-btn venmo">Pay with Venmo</a>
                 <a href="#" target="_blank" class="pay-btn paypal">Pay with PayPal</a>
-                <a href="#" target="_blank" class="pay-btn cashapp">Pay with Cash App</a>
               </div>
 
               <p class="disclosure-text" style="margin-top:8px;">
