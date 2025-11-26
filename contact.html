@@ -3,88 +3,171 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact • Aura Productions</title>
+  <title>Contact & Inquiries • Aura Productions</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-<header class="site-header">
-  <div class="nav-container">
-    <h1 class="logo">AURA PRODUCTIONS</h1>
+  <!-- Sticky Glassy Navbar -->
+  <header class="site-header">
+    <div class="nav-container">
+      <h1 class="logo">AURA PRODUCTIONS</h1>
 
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-  </div>
-</header>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="section">
-  <div class="section-inner">
+  <main>
+    <!-- Contact Hero / Main Section -->
+    <section class="section contact-page fade-in">
+      <div class="section-inner">
 
-    <h2>Contact & Inquiries</h2>
-    <p>
-      Ready to talk about your next commercial, or just have a few questions first?  
-      Drop your details below and tell us what you’re thinking — strategy, story ideas, custom projects, or anything in between.
-      We typically reply within <strong>24 hours</strong>.
-    </p>
+        <div class="contact-heading">
+          <p class="eyebrow">Let’s talk about your next commercial</p>
+          <h2>Contact & Inquiries</h2>
+          <p class="lead">
+            Have questions, custom requests, or want clarity before ordering? 
+            Share a bit about your brand and what you’re trying to create. 
+            We typically respond within <strong>24 hours</strong>.
+          </p>
+        </div>
 
-    <!-- 🚀 Contact Form -->
-    <form action="https://formspree.io/f/mjkdzwaq" method="POST" class="contact-form">
-      <button type="submit" class="btn-primary">Send Inquiry ➜</button>
+        <!-- Two-column layout: form + side info -->
+        <div class="contact-grid">
+          <!-- Left: Form -->
+          <div class="contact-main">
+            <form action="https://formspree.io/f/mjkdzwaq" method="POST" class="contact-form">
+              <!-- Helps you filter inbox -->
+              <input type="hidden" name="subject" value="New Aura Productions Inquiry" />
 
-      <!-- Optional subject tag for your inbox -->
-      <input type="hidden" name="subject" value="New Aura Productions Inquiry" />
+              <label for="name">Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Your full name"
+                required
+              />
 
-      <label for="name">Name</label>
-      <input
-        id="name"
-        name="name"
-        type="text"
-        placeholder="Your full name"
-        required
-      />
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                required
+              />
 
-      <label for="email">Email</label>
-      <input
-        id="email"
-        name="email"
-        type="email"
-        placeholder="you@example.com"
-        required
-      />
+              <label for="business">Business / Brand Name (Optional)</label>
+              <input
+                id="business"
+                name="business"
+                type="text"
+                placeholder="Brand, company, or project name"
+              />
 
-      <label for="business">Business / Brand Name (Optional)</label>
-      <input
-        id="business"
-        name="business"
-        type="text"
-        placeholder="Brand, company, or project name"
-      />
+              <label for="inquiry">What can we help you with?</label>
+              <textarea
+                id="inquiry"
+                name="inquiry"
+                rows="6"
+                placeholder="Tell us about your business, what you’re trying to achieve, and any ideas or questions you already have."
+                required
+              ></textarea>
 
-      <label for="inquiry">What can we help you with?</label>
-      <textarea
-        id="inquiry"
-        name="inquiry"
-        rows="6"
-        placeholder="Tell us a bit about your brand, what you’re trying to achieve, and any ideas or questions you already have."
-        required
-      ></textarea>
+              <button type="submit" class="btn-primary">Send Inquiry ➜</button>
+            </form>
 
-      <!-- Submit Button -->
-      <button type="submit" class="btn-primary">Send Inquiry ➜</button>
-    </form>
+            <p class="pay-note">
+              Prefer direct payment? You can pay via Venmo, PayPal, or Cash App — details are listed on the
+              <a href="pricing.html">Pricing</a> page.
+            </p>
+          </div>
 
-    <p class="pay-note">
-      Prefer direct payment? You can use Venmo, PayPal, or Cash App — details are listed on the
-      <a href="pricing.html">Pricing</a> page.
-    </p>
+          <!-- Right: Quick info cards -->
+          <aside class="contact-side">
+            <div class="info-card">
+              <h3>Business Hours</h3>
+              <p>All times in Eastern (EST).</p>
+              <ul class="hours-list">
+                <li><span>Mon – Fri:</span> 10:00 AM – 7:00 PM</li>
+                <li><span>Saturday:</span> 11:00 AM – 4:00 PM</li>
+                <li><span>Sunday:</span> Closed (inquiries still welcome)</li>
+              </ul>
+            </div>
 
-  </div>
-</section>
+            <div class="info-card">
+              <h3>What to include</h3>
+              <ul class="bullet-list">
+                <li>Your offer or product</li>
+                <li>Who you’re trying to reach</li>
+                <li>Where you’ll run the video (Reels, TikTok, YouTube, etc.)</li>
+                <li>Any deadlines or launch dates</li>
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <h3>Disclosure</h3>
+              <p class="disclosure-text">
+                Aura Productions uses AI tools plus human creative direction to design your visuals, 
+                voice, and music. Results can’t guarantee specific views, clicks, or sales — performance 
+                always depends on your offer, audience, and platform.
+              </p>
+              <p class="disclosure-text">
+                Our role is to create high-converting creative and strategy, not financial or legal advice. 
+                Revisions are provided according to the package you select.
+              </p>
+            </div>
+          </aside>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section fade-in-delayed">
+          <h3>FAQ</h3>
+
+          <details class="faq-item" open>
+            <summary>How long does it take to get my commercial?</summary>
+            <p>
+              Quick social ads are usually delivered within <strong>48 hours</strong> once we have your
+              payment and project details. Larger cinematic promos typically take <strong>5–7 days</strong>.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do you offer refunds?</summary>
+            <p>
+              Because every video is custom-made, refunds are generally not offered after production starts. 
+              We do, however, include revisions with each package and work with you to reach a result you’re proud of.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can you work with any niche or industry?</summary>
+            <p>
+              In most cases, yes. We review each project to ensure it aligns with our creative standards and 
+              content policies. If we aren’t a fit, we’ll let you know and may suggest alternatives.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do payments work?</summary>
+            <p>
+              You can pay via Venmo, PayPal, or Cash App using the details on our Pricing page. 
+              Once payment and your intake form are submitted, we lock in your slot and begin production.
+            </p>
+          </details>
+        </section>
+
+      </div>
+    </section>
+  </main>
 
 </body>
 </html>
+
