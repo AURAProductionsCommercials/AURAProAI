@@ -66,6 +66,7 @@
   <option value="555">Standard Commercial — $555</option>
   <option value="1222">Premium Cinematic Promo — $1,222</option>
 </select>
+
               <!-- Contact basics -->
               <label for="name">Your Name</label>
               <input
@@ -336,9 +337,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const select = document.getElementById('package');
 
     if (pkg && select) {
-      select.value = pkg; // pre-select matching option
-      // Optional: scroll to the form
-      // select.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      select.value = pkg;
     }
   });
 </script>
