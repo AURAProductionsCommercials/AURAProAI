@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Why • AuraProAI Commercials</title>
+
+  <!-- If you already use a global stylesheet, keep this line -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Page-specific styles (you can move these into styles.css if you want) -->
+  <style>
+    :root {
+      --ap-bg: #050316;
+      --ap-bg-soft: #0e0727;
+      --ap-card: #08041d;
+      --ap-accent: #f6c453;
+      --ap-accent-soft: rgba(246, 196, 83, 0.18);
+      --ap-text-main: #fdf9ff;
+      --ap-text-muted: #c0b5f5;
+      --ap-border: #30235c;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1a1042 0, #050316 55%, #020011 100%);
+      color: var(--ap-text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(5, 3, 22, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(88, 71, 140, 0.7);
+    }
+
+    .nav-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      margin: 0;
+      font-size: 14px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ap-accent);
+    }
+
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .main-nav a {
+      color: var(--ap-text-muted);
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+      color: var(--ap-accent);
+      border-color: var(--ap-accent-soft);
+    }
+
+    .page-main {
+      flex: 1;
+      padding: 64px 20px 80px;
+    }
+
+    @media (min-width: 768px) {
+      .page-main {
+        padding-top: 88px;
+      }
+    }
+
+    .why-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .why-hero {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .why-kicker {
+      font-size: 12px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--ap-accent);
+      margin-bottom: 10px;
+    }
+
+    .why-title {
+      font-size: clamp(2.2rem, 3vw, 2.8rem);
+      margin: 0 0 12px;
+    }
+
+    .why-subtitle {
+      max-width: 640px;
+      margin: 0 auto;
+      color: var(--ap-text-muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .why-grid {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+        align-items: start;
+      }
+    }
+
+    .why-card {
+      background: radial-gradient(circle at top left, rgba(246, 196, 83, 0.08), transparent 50%),
+                  var(--ap-card);
+      border-radius: 18px;
+      border: 1px solid var(--ap-border);
+      box-shadow: 0 24px 65px rgba(0, 0, 0, 0.85);
+      padding: 24px 22px 26px;
+    }
+
+    .why-card h2 {
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ap-accent);
+    }
+
+    .why-card p {
+      margin: 0 0 14px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--ap-text-main);
+    }
+
+    .why-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .why-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .why-pill {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--ap-accent-soft);
+      background: rgba(246, 196, 83, 0.03);
+      color: var(--ap-text-muted);
+    }
+
+    .why-side {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .why-stat-card {
+      background: rgba(8, 4, 29, 0.92);
+      border-radius: 16px;
+      border: 1px solid rgba(68, 52, 120, 0.9);
+      padding: 18px 18px 20px;
+    }
+
+    .why-stat-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--ap-text-muted);
+      margin-bottom: 6px;
+    }
+
+    .why-stat-number {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--ap-accent);
+      margin-bottom: 4px;
+    }
+
+    .why-stat-caption {
+      font-size: 13px;
+      color: var(--ap-text-muted);
+      line-height: 1.6;
+    }
+
+    .why-cta {
+      margin-top: 36px;
+      text-align: center;
+    }
+
+    .why-cta p {
+      margin: 0 0 18px;
+      color: var(--ap-text-muted);
+      font-size: 14px;
+    }
+
+    .why-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 26px;
+      border-radius: 999px;
+      border: none;
+      background: radial-gradient(circle at top left, #f6c453, #f29b38);
+      color: #150b2d;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.85);
+      cursor: pointer;
+      transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
+    }
+
+    .why-btn:hover,
+    .why-btn:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.95);
+      filter: brightness(1.02);
+    }
+
+    .site-footer {
+      border-top: 1px solid rgba(60, 48, 104, 0.85);
+      padding: 18px 20px 24px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--ap-text-muted);
+      background: rgba(3, 1, 15, 0.98);
+    }
+
+    .site-footer span {
+      color: var(--ap-accent);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR (match to your existing pages) -->
+  <header class="site-header">
+    <div class="nav-container">
+      <h1 class="logo">AURA PRODUCTIONS COMMERCIALS</h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Packages</a>
+        <a href="intake.html">Intake</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="our-why.html">Our Why</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="why-wrapper">
+      <!-- HERO -->
+      <section class="why-hero">
+        <p class="why-kicker">Our Why</p>
+        <h1 class="why-title">Cinematic storytelling for the brands that don’t have a studio… yet.</h1>
+        <p class="why-subtitle">
+          AuraProAI exists to give creators, small businesses, and new brands access to visuals that feel
+          big-budget without the big-budget gatekeeping. Not everyone has a camera crew and agency retainer —
+          but everyone has a story that deserves to be seen.
+        </p>
+      </section>
+
+      <!-- MAIN GRID -->
+      <section class="why-grid">
+        <!-- Left: Story -->
+        <article class="why-card">
+          <h2>Why AuraProAI Exists</h2>
+          <p>
+            We started AuraProAI after seeing how many incredible ideas stayed invisible simply because
+            production was too expensive, too technical, or too slow. If you didn’t have thousands to spend,
+            your brand didn’t get a cinematic look — it got whatever you could do on your phone.
+          </p>
+          <p>
+            We blend <strong>AI tools</strong> with <strong>human creative direction</strong> so you can skip the
+            barrier between “vision in your head” and “commercial on screen.” Our goal is simple:
+            make professional storytelling <em>accessible, affordable, and beautiful</em> for people who
+            are actually building something.
+          </p>
+          <p>
+            Every project, every donation, and every share helps us upgrade our tools, grow our team,
+            and keep cinematic-quality production within reach for more creators and businesses around the world.
+          </p>
+
+          <div class="why-pill-row">
+            <div class="why-pill">Accessible Production</div>
+            <div class="why-pill">AI + Human Direction</div>
+            <div class="why-pill">Cinematic on a Budget</div>
+          </div>
+        </article>
+
+        <!-- Right: Stats / Impact -->
+        <aside class="why-side">
+          <div class="why-stat-card">
+            <div class="why-stat-label">Our Focus</div>
+            <div class="why-stat-number">Creators & Small Brands First</div>
+            <p class="why-stat-caption">
+              We specialize in helping the brands that are still getting started — the people who
+              need high-end visuals to look credible, land clients, and stand out online.
+            </p>
+          </div>
+
+          <div class="why-stat-card">
+            <div class="why-stat-label">What Your Support Does</div>
+            <p class="why-stat-caption">
+              Your projects and donations help us:
+            </p>
+            <ul class="why-stat-caption" style="padding-left: 18px; margin: 0;">
+              <li>Upgrade AI tools for sharper visuals, sound, and motion</li>
+              <li>Shorten delivery times while keeping quality high</li>
+              <li>Experiment with new formats, styles, and storytelling</li>
+              <li>Offer more flexible options to creators and small businesses</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+
+      <!-- CTA -->
+      <section class="why-cta">
+        <p>
+          Ready to turn your idea into a cinematic spot? Start with a quick intake and we’ll
+          map out the best package for your brand.
+        </p>
+        <a href="intake.html" class="why-btn">Start Your Intake</a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 <span>AuraProAI</span>. All rights reserved.</div>
+  </footer>
+</body>
+</html>
