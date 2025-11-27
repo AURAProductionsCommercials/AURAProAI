@@ -1046,3 +1046,24 @@ footer span {
   box-shadow: 0 0 18px rgba(255, 77, 77, 0.9);
   filter: brightness(1.1);
 }
+.hero {
+  position: relative;
+}
+
+.hero-video-box {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 48%;
+  max-width: 600px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+.hero-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+}
