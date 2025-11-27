@@ -1036,3 +1036,13 @@ footer span {
   background-position: right 12px center;
   background-size: 16px;
 }
+.step-badge.step-red {
+  border-color: #ff4d4d;
+  color: #ffcccc;
+  box-shadow: 0 0 12px rgba(255, 77, 77, 0.6);
+}
+
+.step-badge.step-red:hover {
+  box-shadow: 0 0 18px rgba(255, 77, 77, 0.9);
+  filter: brightness(1.1);
+}
