@@ -1000,3 +1000,38 @@ footer span {
 .pay-btn.venmo { /* you can theme these later if you want */ }
 .pay-btn.paypal {}
 .pay-btn.cashapp {}
+.form-label {
+  display: block;
+  color: #e0cfff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.form-select {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid #5a3cae;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  appearance: none;
+  transition: 0.25s;
+  margin-bottom: 26px; /* FIXES your tooltip overlap problem */
+}
+
+.form-select:focus {
+  border-color: #a589ff;
+  box-shadow: 0 0 12px rgba(165,137,255,0.35);
+  outline: none;
+}
+
+/* Optional: custom dropdown arrow */
+.form-select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='14' height='10' viewBox='0 0 20 20' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 7l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
