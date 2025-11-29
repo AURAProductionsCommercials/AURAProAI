@@ -1117,3 +1117,39 @@ footer span {
   display: block;
   border-radius: 16px;    /* optional: rounded corners */
 }
+/* Override layout for the lead section so it's truly centered */
+.section.lead {
+  display: flex;                /* stop any grid layout */
+  justify-content: center;      /* center the inner container */
+}
+
+.section.lead .section-inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;               /* center the block itself */
+  padding: 0 1.5rem;
+  display: flex;                /* stack content vertically */
+  flex-direction: column;
+  align-items: center;          /* center videos + button */
+  text-align: center;           /* center text */
+}
+
+/* Center the video grid inside */
+.section.lead .hero-videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;      /* center the row of videos */
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.section.lead .hero-video-item {
+  flex: 1 1 260px;
+  max-width: 360px;
+}
+
+.section.lead .hero-video-item video {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+}
