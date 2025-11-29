@@ -12,6 +12,7 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
@@ -22,9 +23,12 @@ body {
   color: #f5f5f5;
   line-height: 1.6;
   min-height: 100vh;
+  height: auto;          /* let content extend the page */
+  overflow-y: auto;      /* 🔑 always allow vertical scroll */
   opacity: 0;
   animation: fadeInBody 1.2s ease-out forwards;
 }
+
 
 /* HEADER + NAV */
 
@@ -533,7 +537,7 @@ footer span {
   padding: 90px 24px 60px;
 }
 
-.section-inner {
+.contact-page .section-inner {
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -1070,4 +1074,7 @@ footer span {
   .lead-text .btn-primary {
     margin: 0 auto;
   }
+}
+.section:last-of-type {
+  padding-bottom: 80px;
 }
